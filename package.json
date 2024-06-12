@@ -18,6 +18,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "assemblyai": "^4.4.7",
     "clsx": "^2.0.0",
     "lucide-react": "^0.376.0",
     "next": "^14.0.4",
