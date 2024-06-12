@@ -20,5 +20,5 @@ export function formatTimeDelta(seconds: number) {
   if (secs > 0) {
     parts.push(`${secs}s`);
   }
-  return parts.join(" ");
+  return parts.join(' ');
 }
