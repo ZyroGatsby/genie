@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import * as React from 'react';
-import { RiAlarmWarningFill } from 'react-icons/ri';
+
+import { buttonVariants } from '@/components/ui/button';
 
 export const metadata: Metadata = {
   title: 'Not Found',
@@ -8,17 +10,40 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
   return (
-    <main>
-      <section className='bg-white'>
-        <div className='layout flex min-h-screen flex-col items-center justify-center text-center text-black'>
-          <RiAlarmWarningFill
-            size={60}
-            className='drop-shadow-glow animate-flicker text-red-500'
-          />
-          <h1 className='mt-8 text-4xl md:text-6xl'>Page Not Found</h1>
-          <a href='/'>Back to home</a>
+    <main className='h-screen justify-center flex items-center'>
+      <div className='min-h-full bg-white px-4 py-16 sm:px-6 sm:py-24 md:grid md:place-items-center lg:px-8'>
+        <div className='mx-auto max-w-max'>
+          <main className='sm:flex'>
+            <p className='text-4xl font-bold tracking-tight text-primary sm:text-5xl'>
+              404
+            </p>
+            <div className='sm:ml-6'>
+              <div className='sm:border-l sm:border-gray-200 sm:pl-6'>
+                <h1 className='text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl'>
+                  Page not found
+                </h1>
+                <p className='mt-1 text-base text-gray-500'>
+                  Please check the URL in the address bar and try again.
+                </p>
+              </div>
+              <div className='mt-10 flex space-x-3 sm:border-l sm:border-transparent sm:pl-6'>
+                <Link
+                  href='/'
+                  className={buttonVariants({ variant: 'default' })}
+                >
+                  Go back home
+                </Link>
+                <Link
+                  href='mailto:zyro.kamson@gmail.com'
+                  className={buttonVariants({ variant: 'secondary' })}
+                >
+                  Contact support
+                </Link>
+              </div>
+            </div>
+          </main>
         </div>
-      </section>
+      </div>
     </main>
   );
 }
