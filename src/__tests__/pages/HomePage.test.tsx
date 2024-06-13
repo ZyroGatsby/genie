@@ -6,7 +6,7 @@ describe('Homepage', () => {
   it('renders the Components', () => {
     render(<HomePage />);
 
-    const heading = screen.getByText(/Building for Productivity/i);
+    const heading = screen.getByText(/Hello/i);
 
     expect(heading).toBeInTheDocument();
   });
