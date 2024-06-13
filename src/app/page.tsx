@@ -1,11 +1,7 @@
 'use client';
 
-import Head from 'next/head';
 import * as React from 'react';
 import '@/lib/env';
-
-import ArrowLink from '@/components/links/ArrowLink';
-import UnderlineLink from '@/components/links/UnderlineLink';
 
 /**
  * SVGR Support
@@ -19,34 +15,37 @@ import Logo from '~/svg/Logo.svg';
 export default function HomePage() {
   return (
     <main>
-      <Head>
-        <title>Hi</title>
-      </Head>
-      <section className='bg-white'>
-        <div className='layout relative flex min-h-screen flex-col items-center justify-center py-12 text-center'>
-          <Logo className='w-16' />
-          <h1 className='mt-4'>Genie</h1>
-          <p className='mt-2 text-sm text-gray-800'>
-            Building for Productivity - HackOps 1.0{' '}
-          </p>
-          <p className='mt-4 text-sm text-gray-700'>
-            <ArrowLink href='https://github.com/ZyroGatsby/genie'>
-              See the repository
-            </ArrowLink>
-          </p>
-
-          <ArrowLink className='mt-4' href='https://pipeops.io/'>
-            Deploy with PipeOps
-          </ArrowLink>
-
-          <footer className='absolute bottom-2 text-gray-700'>
-            © {new Date().getFullYear()} By{' '}
-            <UnderlineLink href='https://github.com/ZyroGatsby'>
-              ZyroGatsby
-            </UnderlineLink>
-          </footer>
+      <div className='mx-auto max-w-lg'>
+        <div>
+          <div className='text-center'>
+            <Logo className='w-10 mx-auto' />
+            <h2 className='mt-2 text-lg font-medium text-gray-900'>Hello</h2>
+            <p className='mt-1 text-sm text-gray-500'>
+              Welcome to <span className='italics'>Genie</span>, your AI-powered
+              quiz creation assistant. Get started by entering what you would
+              like to learn.
+            </p>
+          </div>
+          <form action='#' className='mt-6 flex'>
+            <label htmlFor='what-to-learn' className='sr-only'>
+              What do you want to learn today?
+            </label>
+            <input
+              type='text'
+              name='what-to-learn'
+              id='what-to-learn'
+              className='block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm'
+              placeholder='What do you want to learn today?'
+            />
+            <button
+              type='submit'
+              className='ml-4 flex-shrink-0 rounded-md border border-transparent bg-primary px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
+            >
+              Start learning
+            </button>
+          </form>
         </div>
-      </section>
+      </div>
     </main>
   );
 }
