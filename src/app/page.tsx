@@ -14,6 +14,8 @@ export const metadata: Metadata = {
  * @see https://stackoverflow.com/questions/68103844/how-to-override-next-js-svg-module-declaration
  */
 
+import { Button } from '@/components/ui/button';
+
 import Logo from '~/svg/Logo.svg';
 
 const cards = [
@@ -52,7 +54,7 @@ export default function HomePage() {
             <Logo className='w-10 mx-auto' />
             <h2 className='mt-2 text-lg font-medium text-gray-900'>Hello</h2>
             <p className='mt-1 text-sm text-gray-500'>
-              Welcome to <span className='italics'>Genie</span>, your AI-powered
+              Welcome to <span className='italic'>Genie</span>, your AI-powered
               quiz creation assistant. Get started by entering what you would
               like to learn.
             </p>
@@ -68,12 +70,7 @@ export default function HomePage() {
               className='block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm'
               placeholder='What do you want to learn today?'
             />
-            <button
-              type='submit'
-              className='ml-4 flex-shrink-0 rounded-md border border-transparent bg-primary px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
-            >
-              Start learning
-            </button>
+            <Button className='ml-4'>Start learning</Button>
           </form>
         </div>
         <div className='mt-10'>
