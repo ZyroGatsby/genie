@@ -24,25 +24,25 @@ const cards = [
     name: 'Machine Learning',
     description: 'Learn the basics of machine...',
     imageUrl:
-      'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      'https://images.unsplash.com/photo-1591453089816-0fbb971b454c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bWFjaGluZSUyMGxlYXJuaW5nfGVufDB8fDB8fHwy',
   },
   {
     name: 'Calculus and Statistics',
     description: 'Learn and enhance your abil...',
     imageUrl:
-      'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      'https://images.unsplash.com/photo-1634117622592-114e3024ff27?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3RhdGlzdGljc3xlbnwwfHwwfHx8Mg%3D%3D',
   },
   {
     name: 'Project Management',
     description: 'Become a seasoned project...',
     imageUrl:
-      'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      'https://images.unsplash.com/photo-1611224885990-ab7363d1f2a9?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvamVjdCUyMG1hbmFnZW1lbnR8ZW58MHx8MHx8fDI%3D',
   },
   {
     name: 'UI/UX Design',
     description: 'Become a seasoned project...',
     imageUrl:
-      'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      'https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fFVJJTJGVVglMjBkZXNpZ258ZW58MHx8MHx8fDI%3D',
   },
 ];
 
@@ -82,7 +82,7 @@ export default function HomePage() {
                   <div className='flex-shrink-0'>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      className='h-10 w-10 rounded-md'
+                      className='h-10 w-10 rounded-sm'
                       src={card.imageUrl}
                       alt=''
                     />
