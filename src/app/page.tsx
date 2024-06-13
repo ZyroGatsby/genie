@@ -1,7 +1,10 @@
-'use client';
-
+import { Metadata } from 'next';
 import * as React from 'react';
 import '@/lib/env';
+
+export const metadata: Metadata = {
+  title: 'Home',
+};
 
 /**
  * SVGR Support
