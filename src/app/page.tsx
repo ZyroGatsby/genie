@@ -13,7 +13,30 @@ export const metadata: Metadata = {
  * You can override the next-env if the type is important to you
  * @see https://stackoverflow.com/questions/68103844/how-to-override-next-js-svg-module-declaration
  */
+import { PlusIcon } from 'lucide-react';
+
 import Logo from '~/svg/Logo.svg';
+
+const cards = [
+  {
+    name: 'Lindsay Walton',
+    role: 'Front-end Developer',
+    imageUrl:
+      'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  },
+  {
+    name: 'Courtney Henry',
+    role: 'Designer',
+    imageUrl:
+      'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  },
+  {
+    name: 'Tom Cook',
+    role: 'Director, Product Development',
+    imageUrl:
+      'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  },
+];
 
 export default function HomePage() {
   return (
@@ -47,6 +70,55 @@ export default function HomePage() {
               Start learning
             </button>
           </form>
+        </div>
+        <div className='mt-10'>
+          <h3 className='text-xs tracking-tighter font-medium text-gray-500 uppercase'>
+            You can start with the following topics
+          </h3>
+          <ul
+            role='list'
+            className='mt-4 divide-y divide-gray-200 border-t border-b border-gray-200'
+          >
+            {cards.map((card, cardIdx) => (
+              <li
+                key={cardIdx}
+                className='flex items-center justify-between space-x-3 py-4'
+              >
+                <div className='flex min-w-0 flex-1 items-center space-x-3'>
+                  <div className='flex-shrink-0'>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      className='h-10 w-10 rounded-full'
+                      src={card.imageUrl}
+                      alt=''
+                    />
+                  </div>
+                  <div className='min-w-0 flex-1'>
+                    <p className='truncate text-sm font-medium text-gray-900'>
+                      {card.name}
+                    </p>
+                    <p className='truncate text-sm font-medium text-gray-500'>
+                      {card.role}
+                    </p>
+                  </div>
+                </div>
+                <div className='flex-shrink-0'>
+                  <button
+                    type='button'
+                    className='inline-flex items-center rounded-full border border-transparent bg-gray-100 py-2 px-3 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
+                  >
+                    <PlusIcon
+                      className='-ml-1 mr-0.5 h-5 w-5 text-gray-400'
+                      aria-hidden='true'
+                    />
+                    <span className='text-sm font-medium text-gray-900'>
+                      Start learning
+                    </span>
+                  </button>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </main>
