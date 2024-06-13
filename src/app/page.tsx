@@ -15,6 +15,7 @@ export const metadata: Metadata = {
  */
 
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 
 import Logo from '~/svg/Logo.svg';
 
@@ -60,16 +61,7 @@ export default function HomePage() {
             </p>
           </div>
           <form action='#' className='mt-6 flex'>
-            <label htmlFor='what-to-learn' className='sr-only'>
-              What do you want to learn today?
-            </label>
-            <input
-              type='text'
-              name='what-to-learn'
-              id='what-to-learn'
-              className='block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm'
-              placeholder='What do you want to learn today?'
-            />
+            <Input type='text' placeholder='What do you want to learn today?' />
             <Button className='ml-4'>Start learning</Button>
           </form>
         </div>
