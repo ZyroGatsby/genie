@@ -97,14 +97,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div className='flex-shrink-0'>
-                  <button
-                    type='button'
-                    className='inline-flex items-center rounded-full border border-transparent bg-gray-100 py-2 px-3 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
-                  >
-                    <span className='text-sm text-gray-900'>
-                      Start learning
-                    </span>
-                  </button>
+                  <Button className='rounded-full font-normal' variant='secondary'>Start learning</Button>
                 </div>
               </li>
             ))}
