@@ -25,5 +25,12 @@ export async function strict_output(
     answer: string;
   }[]
 > {
+  // if the user input is in a list, we also process the output as a list of json
+  const list_input: boolean = Array.isArray(user_prompt);
+  // if the output format contains dynamic elements of < or >, then add to the prompt to handle dynamic elements
+  const dynamic_elements: boolean = /<.*?>/.test(JSON.stringify(output_format));
+  // if the output format contains list elements of [ or ], then we add to the prompt to handle lists
+  const list_output: boolean = /\[.*?\]/.test(JSON.stringify(output_format));
+
   return [];
 }
