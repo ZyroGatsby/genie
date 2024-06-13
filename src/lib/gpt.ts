@@ -12,7 +12,13 @@ interface OutputFormat {
 export async function strict_output(
   system_prompt: string,
   user_prompt: string | string[],
-  output_format: OutputFormat
+  output_format: OutputFormat,
+  default_category = '',
+  output_value_only = false,
+  model = 'accounts/fireworks/models/mixtral-8x7b-instruct',
+  temperature = 1,
+  num_tries = 3,
+  verbose = false
 ): Promise<
   {
     question: string;
