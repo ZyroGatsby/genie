@@ -97,7 +97,12 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div className='flex-shrink-0'>
-                  <Button className='rounded-full font-normal' variant='secondary'>Start learning</Button>
+                  <Button
+                    className='rounded-full font-normal'
+                    variant='secondary'
+                  >
+                    Start learning
+                  </Button>
                 </div>
               </li>
             ))}
