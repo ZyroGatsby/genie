@@ -17,6 +17,8 @@ export const metadata: Metadata = {
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import Logo from '~/svg/Logo.svg';
 
 const cards = [
