@@ -10,6 +10,8 @@ const archivo = Archivo({
   variable: '--font-archivo',
 });
 
+import Providers from '@/components/Providers';
+
 import { siteConfig } from '@/constant/config';
 
 export const metadata: Metadata = {
@@ -56,7 +58,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en' className={`${archivo.variable}`}>
-      <body>{children}</body>
+      <body>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
