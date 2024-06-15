@@ -14,12 +14,14 @@ export const metadata: Metadata = {
  * @see https://stackoverflow.com/questions/68103844/how-to-override-next-js-svg-module-declaration
  */
 
+import Footer from '@/components/sections/footer';
 import Hero from '@/components/sections/hero';
 
 export default function HomePage() {
   return (
     <main>
       <Hero />
+      <Footer />
     </main>
   );
 }
