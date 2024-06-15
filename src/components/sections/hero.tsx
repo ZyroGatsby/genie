@@ -12,7 +12,7 @@ export default function Hero() {
           <br /> Check the{' '}
           <a
             target='_blank'
-            href='https://github.com/neobrutalism-templates/saas'
+            href='https://github.com/ZyroGatsby/genie.git'
             className='font-heading underline'
           >
             github repo
