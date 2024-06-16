@@ -40,7 +40,7 @@ export default function Error({
                 </Button>
                 <Link
                   href='mailto:zyro.kamson@gmail.com'
-                  className={buttonVariants({ variant: 'secondary' })}
+                  className={buttonVariants({ variant: 'default' })}
                 >
                   Contact support
                 </Link>
