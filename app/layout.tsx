@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Archivo as FontSans } from "next/font/google";
 import "./globals.css";
+import { Providers } from "./providers";
 
 const fontSans = FontSans({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -16,7 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={fontSans.className}>{children}</body>
+      <body className={fontSans.className}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
